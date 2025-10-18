@@ -3,6 +3,8 @@
 **Created by:** [Arup Biswas](https://github.com/Arupbiswas09)  
 **Repository:** https://github.com/Arupbiswas09/clickup-automation-toolkit.git
 
+![ClickUp Automation Toolkit](./images/SocialMediaCard.png)
+
 > A comprehensive ClickUp automation toolkit for seamless task management, project setup, and workflow automation. Create, manage, and organize ClickUp tasks instantly with CLI tools, batch operations, and AI integration.
 
 **Purpose:** This toolkit was designed to streamline ClickUp task management and improve productivity for development teams worldwide. It provides developers, project managers, and teams with powerful automation capabilities to manage their ClickUp workspaces efficiently.
@@ -14,6 +16,8 @@
 
 ## ✨ Features
 
+![CLI Tools Showcase](./images/CLIToolsShowcase.png)
+
 - 🚀 **Instant Task Creation** - Create tasks in seconds with predefined templates
 - 🎯 **Smart Templates** - Pre-configured templates for features, bugs, design, API, tests, and documentation
 - 🔧 **CLI Interface** - Powerful command-line tools for task management
@@ -23,6 +27,8 @@
 - 📦 **Easy Setup** - One-command installation and configuration
 
 ## 🚀 Quick Start
+
+![Hero Banner](./images/herobanner.png)
 
 ### Installation
 
@@ -190,6 +196,8 @@ Create a `config/config.json` file (copy from `config/config.example.json`) to c
 ## 🚀 Advanced Usage
 
 ### Batch Task Creation
+
+![Batch Operations Visualization](./images/BatchOperations%20Visualization.png)
 
 ```javascript
 const automation = new ClickUpAutomation();
