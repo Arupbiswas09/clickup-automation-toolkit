@@ -1,0 +1,74 @@
+{
+  "clickup": {
+    "apiKey": "YOUR_CLICKUP_API_KEY_HERE",
+    "teamId": "YOUR_TEAM_ID_HERE",
+    "defaultListId": "YOUR_DEFAULT_LIST_ID_HERE",
+    "defaultAssignee": "YOUR_DEFAULT_USER_ID_HERE"
+  },
+  "automation": {
+    "defaultPriority": 2,
+    "defaultStatus": "idea / intake",
+    "autoAssign": true,
+    "enableNotifications": true
+  },
+  "taskTemplates": {
+    "feature": {
+      "emoji": "🚀",
+      "priority": 2,
+      "color": "#4CAF50",
+      "defaultDescription": "## 🚀 FEATURE Task\n\n### Description\n{description}\n\n### Acceptance Criteria\n- [ ] Define requirements\n- [ ] Design solution\n- [ ] Implement feature\n- [ ] Write tests\n- [ ] Review and approve\n\n### Notes\nCreated via ClickUp Automation Toolkit"
+    },
+    "bug": {
+      "emoji": "🐛",
+      "priority": 1,
+      "color": "#F44336",
+      "defaultDescription": "## 🐛 BUG Report\n\n### Issue Description\n{description}\n\n### Steps to Reproduce\n1. \n2. \n3. \n\n### Expected Behavior\n\n### Actual Behavior\n\n### Environment\n- Browser: \n- OS: \n- Version: \n\n### Priority: High\nCreated via ClickUp Automation Toolkit"
+    },
+    "design": {
+      "emoji": "🎨",
+      "priority": 2,
+      "color": "#9C27B0",
+      "defaultDescription": "## 🎨 DESIGN Task\n\n### Design Requirements\n{description}\n\n### Deliverables\n- [ ] Wireframes\n- [ ] Mockups\n- [ ] Design system components\n- [ ] Assets export\n- [ ] Design review\n\n### Notes\nCreated via ClickUp Automation Toolkit"
+    },
+    "api": {
+      "emoji": "⚡",
+      "priority": 2,
+      "color": "#FF9800",
+      "defaultDescription": "## ⚡ API Development\n\n### API Requirements\n{description}\n\n### Endpoints to Implement\n- [ ] \n- [ ] \n\n### Acceptance Criteria\n- [ ] API design\n- [ ] Implementation\n- [ ] Documentation\n- [ ] Testing\n- [ ] Security review\n\n### Notes\nCreated via ClickUp Automation Toolkit"
+    },
+    "test": {
+      "emoji": "🧪",
+      "priority": 3,
+      "color": "#2196F3",
+      "defaultDescription": "## 🧪 TESTING Task\n\n### Test Requirements\n{description}\n\n### Test Cases\n- [ ] Unit tests\n- [ ] Integration tests\n- [ ] E2E tests\n- [ ] Performance tests\n\n### Coverage Goals\n- [ ] 80%+ code coverage\n- [ ] All critical paths tested\n\n### Notes\nCreated via ClickUp Automation Toolkit"
+    },
+    "doc": {
+      "emoji": "📚",
+      "priority": 3,
+      "color": "#795548",
+      "defaultDescription": "## 📚 DOCUMENTATION Task\n\n### Documentation Requirements\n{description}\n\n### Deliverables\n- [ ] Technical documentation\n- [ ] User guides\n- [ ] API documentation\n- [ ] Code comments\n- [ ] README updates\n\n### Notes\nCreated via ClickUp Automation Toolkit"
+    },
+    "general": {
+      "emoji": "📋",
+      "priority": 2,
+      "color": "#607D8B",
+      "defaultDescription": "## 📋 GENERAL Task\n\n### Task Description\n{description}\n\n### Acceptance Criteria\n- [ ] Define requirements\n- [ ] Complete implementation\n- [ ] Review and approve\n\n### Notes\nCreated via ClickUp Automation Toolkit"
+    }
+  },
+  "notifications": {
+    "onTaskCreated": true,
+    "onTaskCompleted": true,
+    "onTaskAssigned": true
+  },
+  "integrations": {
+    "slack": {
+      "enabled": false,
+      "webhookUrl": "",
+      "channel": "#clickup-notifications"
+    },
+    "discord": {
+      "enabled": false,
+      "webhookUrl": ""
+    }
+  }
+}

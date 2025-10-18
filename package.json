@@ -1,0 +1,104 @@
+{
+  "name": "clickup-automation-toolkit",
+  "version": "1.0.0",
+  "description": "A comprehensive ClickUp automation toolkit created by Arup Biswas for seamless task management, project setup, and workflow automation",
+  "main": "src/index.js",
+  "bin": {
+    "clickup-auto": "./bin/clickup-cli.js",
+    "instant-task": "./bin/instant-task.js"
+  },
+  "scripts": {
+    "start": "node src/clickup-mcp-server.js",
+    "setup": "node scripts/setup.js",
+    "test": "jest",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/ bin/ scripts/ tests/ --ext .js",
+    "lint:fix": "eslint src/ bin/ scripts/ tests/ --ext .js --fix",
+    "validate": "node scripts/validate-config.js",
+    "init": "node scripts/init-project.js",
+    "instant": "node bin/instant-task.js",
+    "instant:feature": "node bin/instant-task.js feature",
+    "instant:bug": "node bin/instant-task.js bug",
+    "instant:design": "node bin/instant-task.js design",
+    "instant:api": "node bin/instant-task.js api",
+    "instant:test": "node bin/instant-task.js test",
+    "instant:doc": "node bin/instant-task.js doc",
+    "clickup": "node bin/clickup-cli.js",
+    "clickup:create": "node bin/clickup-cli.js create",
+    "clickup:project": "node bin/clickup-cli.js project",
+    "clickup:status": "node bin/clickup-cli.js status",
+    "clickup:list": "node bin/clickup-cli.js list",
+    "clickup:batch": "node bin/clickup-cli.js batch",
+    "clickup:move": "node bin/clickup-cli.js move",
+    "clickup:update": "node bin/clickup-cli.js update",
+    "clickup:search": "node bin/clickup-cli.js search",
+    "clickup:sprint": "node bin/clickup-cli.js sprint",
+    "clickup:workflow": "node bin/clickup-cli.js workflow",
+    "clickup:time": "node bin/clickup-cli.js time",
+    "docker:build": "docker build -t clickup-automation .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env clickup-automation"
+  },
+  "keywords": [
+    "clickup",
+    "automation",
+    "task-management",
+    "project-management",
+    "cli",
+    "productivity",
+    "workflow",
+    "api",
+    "mcp-server",
+    "ai-integration",
+    "batch-operations",
+    "agile",
+    "scrum",
+    "development-tools"
+  ],
+  "author": "Arup Biswas <arupbiswas09@gmail.com> (https://github.com/Arupbiswas09)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arupbiswas09/clickup-automation-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Arupbiswas09/clickup-automation-toolkit/issues"
+  },
+  "homepage": "https://github.com/Arupbiswas09/clickup-automation-toolkit#readme",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "commander": "^11.1.0",
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.12",
+    "ora": "^7.0.1",
+    "table": "^6.8.1",
+    "moment": "^2.29.4",
+    "dotenv": "^16.3.1",
+    "fs-extra": "^11.1.1",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "nodemon": "^3.0.2"
+  },
+  "type": "module",
+  "files": [
+    "src/",
+    "bin/",
+    "scripts/",
+    "config/",
+    "docs/",
+    "examples/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ]
+}

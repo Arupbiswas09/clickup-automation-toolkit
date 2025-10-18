@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  clickup-automation:
+    build: .
+    container_name: clickup-automation-toolkit
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
+    volumes:
+      # Mount logs directory for persistence
+      - ./logs:/app/logs
+      # Mount config for custom configurations
+      - ./config:/app/config:ro
+    restart: unless-stopped
+    networks:
+      - clickup-network
+    
+    # Override default command for interactive use
+    # command: ["tail", "-f", "/dev/null"]
+    
+    # For CLI usage
+    stdin_open: true
+    tty: true
+
+  # Optional: Redis for caching (future enhancement)
+  redis:
+    image: redis:7-alpine
+    container_name: clickup-redis
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    networks:
+      - clickup-network
+    profiles:
+      - cache
+
+  # Optional: PostgreSQL for data persistence (future enhancement)
+  postgres:
+    image: postgres:15-alpine
+    container_name: clickup-postgres
+    environment:
+      POSTGRES_DB: clickup_automation
+      POSTGRES_USER: clickup
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - clickup-network
+    profiles:
+      - database
+
+networks:
+  clickup-network:
+    driver: bridge
+
+volumes:
+  redis_data:
+  postgres_data:
